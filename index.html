@@ -1,1 +1,219 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 15px;
+  background: linear-gradient(135deg,#ffd6e0,#ffeef3);
+  font-family: 'Poppins', sans-serif;
+  color: #493c42;
+}
+
+.page {
+  max-width: 440px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(150,76,103,.14);
+}
+
+.eyebrow {
+  color: #d66d91;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 25px;
+  line-height: 1.4;
+  color: #49343e;
+  margin: 0 0 12px;
+}
+
+.intro {
+  color: #806c75;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.photo {
+  width: 100%;
+  display: block;
+  border-radius: 19px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.brand-box {
+  background: #f2f9fc;
+  border: 1px solid #e3f0f5;
+  border-radius: 18px;
+  padding: 20px 10px;
+  margin: 18px 0;
+}
+
+.brand {
+  color: #1682a5;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  color: #6c8792;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 13px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+.bottle {
+  width: 43px;
+  height: 70px;
+  background: linear-gradient(90deg,#fff,#dceef3);
+  border: 1px solid #c8dfe7;
+  border-radius: 8px 8px 12px 12px;
+  position: relative;
+}
+
+.bottle:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  width: 17px;
+  height: 9px;
+  background: #dcecf1;
+  border-radius: 3px;
+}
+
+.bottle.tall {
+  height: 88px;
+}
+
+.bottle.jar {
+  width: 55px;
+  height: 48px;
+}
+
+.bottle span {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  font-size: 6px;
+  font-weight: bold;
+  color: #1682a5;
+}
+
+.bottle.jar span {
+  top: 17px;
+}
+
+.tagline {
+  color: #c45e84;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.note {
+  color: #887781;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer {
+  color: #c17a95;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+@media(max-width:380px) {
+  .card { padding: 19px; }
+  h1 { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="card">
+
+<p class="eyebrow">A LITTLE SOMETHING FOR YOU ♡</p>
+
+<h1>
+Hey, check out this new Cetaphil collection!
+</h1>
+
+<p class="intro">
+A little skincare moment, starring someone
+who deserves all the pampering.
+</p>
+
+<img class="photo" src="assets/yukti-main.jpeg" alt="Yukti">
+
+<div class="brand-box">
+
+<div class="brand">Cetaphil</div>
+
+<div class="brand-sub">GENTLE SKIN CARE</div>
+
+<div class="products">
+<div class="bottle"><span>Cetaphil</span></div>
+<div class="bottle tall"><span>Cetaphil</span></div>
+<div class="bottle jar"><span>Cetaphil</span></div>
+<div class="bottle"><span>Cetaphil</span></div>
+</div>
+
+</div>
+
+<p class="tagline">
+Because pretty deserves gentle care. ✨
+</p>
+
+<p class="note">
+A tiny reminder to take care of that lovely face
+<br>
+that makes everything look a little brighter.
+</p>
+
+<img class="photo" src="assets/yukti-second.jpeg" alt="Yukti">
+
+<p class="footer">
+Curated with a little extra love ♥
+</p>
+
+</div>
+</div>
+</body>
+</html>
