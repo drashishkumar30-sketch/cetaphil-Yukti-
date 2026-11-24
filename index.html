@@ -13,31 +13,30 @@
 
 <style>
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  padding: 25px 15px;
-  background: linear-gradient(135deg, #ffd6e0, #ffeef3);
-  font-family: 'Poppins', sans-serif;
+  padding: 25px 14px;
+  background: linear-gradient(135deg,#ffd6e0,#fff0f5);
+  font-family: 'Poppins',sans-serif;
   color: #493c42;
 }
 
 .page {
-  width: 100%;
   max-width: 440px;
-  margin: 30px auto;
+  margin: 25px auto;
 }
 
 .card {
-  background: rgba(255,255,255,0.96);
+  background: #fff;
   border-radius: 27px;
-  padding: 27px 22px;
+  padding: 27px 20px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(150,76,103,.15);
+  box-shadow: 0 15px 40px rgba(150,76,103,.14);
   overflow: hidden;
 }
 
@@ -50,7 +49,7 @@ body {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 h1 {
@@ -60,14 +59,14 @@ h1 {
 }
 
 .subtitle {
-  font-size: 14px;
   color: #806c75;
+  font-size: 14px;
   line-height: 1.9;
   margin: 20px 0;
 }
 
 .sparkle {
-  font-size: 52px;
+  font-size: 50px;
   margin: 20px 0;
 }
 
@@ -85,9 +84,9 @@ h1 {
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-  padding: 15px 27px;
+  padding: 15px 28px;
   border-radius: 50px;
-  margin-top: 15px;
+  margin-top: 18px;
   cursor: pointer;
   box-shadow: 0 7px 18px rgba(214,109,145,.25);
 }
@@ -99,114 +98,168 @@ h1 {
 .footer {
   color: #c17a95;
   font-size: 11px;
-  margin-top: 25px;
   line-height: 1.8;
+  margin-top: 25px;
 }
 
-/* SECOND PAGE */
+/* BRAND PAGE */
 
 .brand-name {
   color: #1682a5;
-  font-size: 31px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 
 .brand-caption {
-  color: #6c8792;
+  color: #829da6;
   font-size: 10px;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin: 5px 0 20px;
 }
 
 .section-title {
-  font-size: 21px;
   color: #49343e;
+  font-size: 21px;
   line-height: 1.5;
-  margin: 20px 0 12px;
+  margin: 18px 0 10px;
 }
 
 .description {
-  font-size: 13px;
   color: #806c75;
+  font-size: 13px;
   line-height: 1.8;
-  margin: 12px 0 20px;
+  margin: 12px 0 18px;
 }
 
 .hero-photo {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 19px;
-  object-fit: cover;
-  object-position: center;
   margin: 18px 0;
   box-shadow: 0 7px 20px rgba(78,46,60,.12);
 }
 
+/* PRODUCT SHOWCASE */
+
 .product-area {
-  background: #f1f9fc;
-  border: 1px solid #e3f0f5;
-  border-radius: 20px;
-  padding: 22px 10px;
+  background: linear-gradient(145deg,#fff8fa,#f0f9fc);
+  border: 1px solid #f2dce5;
+  border-radius: 22px;
+  padding: 25px 12px;
   margin: 22px 0;
 }
 
-.products {
+.product-heading {
+  color: #d66d91;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.product-subheading {
+  color: #829da6;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin: 7px 0 25px;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 22px 10px;
+  align-items: end;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pack {
+  width: 78px;
+  height: 112px;
+  border: 1px solid #ead2dc;
+  border-radius: 10px 10px 15px 15px;
+  background: linear-gradient(90deg,#fff,#fff0f5);
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap: 13px;
-  height: 115px;
-  margin-top: 18px;
+  align-items: center;
+  box-shadow: 0 5px 12px rgba(180,100,130,.12);
 }
 
-.bottle {
-  width: 46px;
-  height: 75px;
-  border: 1px solid #c8dfe7;
-  border-radius: 9px 9px 12px 12px;
-  background: linear-gradient(90deg,#fff,#e0f0f5);
-  position: relative;
-}
-
-.bottle::before {
+.pack::before {
   content: "";
   position: absolute;
-  top: -8px;
-  left: 13px;
-  width: 18px;
-  height: 9px;
-  background: #dcecf1;
-  border-radius: 3px;
+  top: -9px;
+  width: 29px;
+  height: 11px;
+  background: #edb6c8;
+  border-radius: 4px 4px 2px 2px;
 }
 
-.bottle.tall {
-  height: 95px;
-  width: 53px;
-}
-
-.bottle.jar {
-  height: 53px;
-  width: 58px;
-}
-
-.bottle span {
+.pack::after {
+  content: "Cetaphil";
   position: absolute;
-  top: 28px;
-  left: 0;
-  right: 0;
-  font-size: 6px;
-  font-weight: 700;
+  top: 42%;
   color: #1682a5;
+  font-size: 10px;
+  font-weight: 700;
 }
 
-.bottle.jar span {
-  top: 17px;
+.pack.tall {
+  height: 132px;
+  width: 76px;
+}
+
+.pack.jar {
+  width: 88px;
+  height: 75px;
+  border-radius: 15px;
+}
+
+.pack.jar::before {
+  top: -8px;
+  width: 90px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.pack.tube {
+  height: 120px;
+  width: 65px;
+  border-radius: 10px 10px 17px 17px;
+}
+
+.pack.tube::before {
+  top: auto;
+  bottom: -7px;
+  width: 23px;
+  height: 9px;
+  background: #edb6c8;
+}
+
+.product-label {
+  color: #765e69;
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 125px;
+}
+
+.product-label small {
+  display: block;
+  color: #c47793;
+  font-size: 9px;
+  margin-top: 3px;
 }
 
 .tagline {
-  font-size: 16px;
   color: #c45e84;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
   margin: 22px 0 10px;
@@ -224,13 +277,13 @@ h1 {
   box-shadow: none;
 }
 
-@media(max-width:380px) {
+@media(max-width:360px) {
   .card {
-    padding: 22px 17px;
+    padding: 21px 15px;
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 </style>
@@ -240,38 +293,38 @@ h1 {
 
 <div class="page">
 
-<!-- PAGE 1: BRAND DEAL ANNOUNCEMENT -->
+<!-- PAGE 1: ANNOUNCEMENT -->
 
 <section class="card" id="page1">
 
-  <p class="eyebrow">
-    ✨ EXCLUSIVE ANNOUNCEMENT ✨
-  </p>
+<p class="eyebrow">
+✨ EXCLUSIVE ANNOUNCEMENT ✨
+</p>
 
-  <div class="sparkle">💌</div>
+<div class="sparkle">💌</div>
 
-  <h1>
-    Guess who's got a new brand deal?
-  </h1>
+<h1>
+Guess who's got a new brand deal?
+</h1>
 
-  <p class="subtitle">
-    We've got some exciting news to share.
-    Someone's skincare game just got
-    a serious upgrade!
-  </p>
+<p class="subtitle">
+We've got some exciting news to share.
+Someone's skincare game just got
+a serious upgrade!
+</p>
 
-  <h2 class="main-title">
-    CHECK OUT THIS NEW BRAND DEAL!
-  </h2>
+<h2 class="main-title">
+CHECK OUT THIS NEW BRAND DEAL!
+</h2>
 
-  <button class="btn" onclick="showReveal()">
-    TAP TO REVEAL ♡ →
-  </button>
+<button class="btn" onclick="showReveal()">
+TAP TO REVEAL ♡ →
+</button>
 
-  <p class="footer">
-    An exclusive little surprise,<br>
-    made just for you.
-  </p>
+<p class="footer">
+An exclusive little surprise,<br>
+made just for you.
+</p>
 
 </section>
 
@@ -280,97 +333,114 @@ h1 {
 
 <section class="card hidden" id="page2">
 
-  <p class="eyebrow">
-    ✨ THE BIG REVEAL ✨
-  </p>
+<p class="eyebrow">
+✨ THE BIG REVEAL ✨
+</p>
 
-  <h1 class="brand-name">
-    Cetaphil × Yukti
-  </h1>
+<h1 class="brand-name">
+Cetaphil × Yukti
+</h1>
 
-  <p class="brand-caption">
-    GENTLE SKINCARE. EXTRAORDINARY GLOW.
-  </p>
+<p class="brand-caption">
+BRIGHT HEALTHY RADIANCE
+</p>
 
-  <h2 class="section-title">
-    Meet our newest brand ambassador!
-  </h2>
+<h2 class="section-title">
+Meet our newest brand ambassador!
+</h2>
 
-  <p class="description">
-    Introducing the face of our newest
-    skincare collaboration.
-  </p>
+<p class="description">
+Introducing the face of our newest
+skincare collaboration.
+</p>
 
-  <!-- FIRST PHOTOGRAPH -->
+<!-- YUKTI'S PHOTO -->
 
-  <img
-    class="hero-photo"
-    src="assets/IMG_8037.jpeg"
-    alt="Yukti - Brand Ambassador"
-  >
+<img
+class="hero-photo"
+src="assets/IMG_8037.jpeg"
+alt="Yukti - Brand Ambassador"
+>
 
-  <!-- CETAPHIL PRODUCTS -->
+<!-- PINK CETAPHIL COLLECTION -->
 
-  <div class="product-area">
+<div class="product-area">
 
-    <h2 class="brand-name">
-      Cetaphil
-    </h2>
+<h2 class="product-heading">
+The Bright Healthy Radiance Collection
+</h2>
 
-    <p class="brand-caption">
-      GENTLE SKIN CARE
-    </p>
+<p class="product-subheading">
+A LITTLE GLOW. A LOT OF LOVE.
+</p>
 
-    <div class="products">
+<div class="collection">
 
-      <div class="bottle">
-        <span>Cetaphil</span>
-      </div>
+<div class="product">
+<div class="pack tube"></div>
+<p class="product-label">
+Reveal Creamy Cleanser
+<small>Cleanse</small>
+</p>
+</div>
 
-      <div class="bottle tall">
-        <span>Cetaphil</span>
-      </div>
+<div class="product">
+<div class="pack tall"></div>
+<p class="product-label">
+Brightening Lotion
+<small>Hydrate</small>
+</p>
+</div>
 
-      <div class="bottle jar">
-        <span>Cetaphil</span>
-      </div>
+<div class="product">
+<div class="pack"></div>
+<p class="product-label">
+Perfecting Serum
+<small>Perfect</small>
+</p>
+</div>
 
-      <div class="bottle">
-        <span>Cetaphil</span>
-      </div>
+<div class="product">
+<div class="pack jar"></div>
+<p class="product-label">
+Night Comfort Cream
+<small>Nourish</small>
+</p>
+</div>
 
-    </div>
+</div>
 
-    <p class="small-note">
-      A little skincare love for that lovely face.
-    </p>
+<p class="tagline">
+Because pretty deserves gentle care. ♡
+</p>
 
-  </div>
+<p class="small-note">
+A little skincare love for that lovely face.
+</p>
 
-  <!-- SECOND PHOTOGRAPH -->
+</div>
 
-  <img
-    class="hero-photo"
-    src="assets/IMG_8015.jpeg"
-    alt="Yukti enjoying her evening"
-  >
+<h2 class="section-title">
+And here's our favourite face. ♡
+</h2>
 
-  <p class="tagline">
-    Because pretty deserves gentle care. ♡
-  </p>
+<p class="description">
+The real reason this collaboration deserves
+a five-star rating.
+</p>
 
-  <p class="small-note">
-    Looking good is one thing.<br>
-    Being this effortlessly adorable is another.
-  </p>
+<p class="tagline">
+Looking good is one thing.<br>
+Being this effortlessly adorable is another.
+</p>
 
-  <p class="footer">
-    Made with love, exclusively for you ♥
-  </p>
+<p class="footer">
+Made with love, exclusively for you ♥
+</p>
 
-  <button class="btn back-btn" onclick="goBack()">
-    ← Back to the announcement
-  </button>
+<button class="btn back-btn" onclick="goBack()">
+← Back to announcement
+</button>
 
 </section>
 
