@@ -7,8 +7,6 @@
 <meta name="theme-color" content="#fbdce6">
 <title>Cetaphil × Yukti ♡</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 * {
   box-sizing: border-box;
@@ -17,52 +15,18 @@
 }
 
 :root {
-  --pink: #d96e96;
+  --pink: #ed4d83;
+  --softpink: #fbdce6;
   --dark: #503442;
-  --gold: #c59b67;
+  --muted: #907b85;
 }
 
 body {
-  font-family: Poppins, sans-serif;
-  background: linear-gradient(135deg,#f9dce6,#fff0f5);
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg,#fbdce6,#fff0f5);
   color: var(--dark);
   overflow-x: hidden;
-}
-
-.page {
-  max-width: 470px;
-  margin: auto;
-  min-height: 100vh;
-  padding: 25px 15px 50px;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.serif {
-  font-family: 'Playfair Display',serif;
-}
-
-.card {
-  background: rgba(255,255,255,.9);
-  border: 1px solid white;
-  border-radius: 30px;
-  padding: 28px 20px;
-  box-shadow: 0 18px 50px rgba(151,75,104,.13);
-  text-align: center;
-  overflow: hidden;
-}
-
-.eyebrow {
-  color: var(--pink);
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-
-h1,h2,h3 {
-  font-family: 'Playfair Display',serif;
 }
 
 button {
@@ -70,23 +34,49 @@ button {
   cursor: pointer;
 }
 
+.page {
+  max-width: 470px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 25px 15px 45px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card {
+  background: rgba(255,255,255,.92);
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 28px 20px;
+  box-shadow: 0 18px 50px rgba(151,75,104,.13);
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+}
+
 /* FLOATING HEARTS */
 
 .floating {
   position: fixed;
   pointer-events: none;
-  z-index: 0;
+  z-index: 5;
   animation: floatUp linear forwards;
   opacity: .6;
 }
 
 @keyframes floatUp {
   0% {
-    transform: translateY(110vh) rotate(0deg);
+    transform: translateY(110vh);
     opacity: 0;
   }
   15% {opacity: .7}
-  85% {opacity: .7}
   100% {
     transform: translateY(-15vh) rotate(35deg);
     opacity: 0;
@@ -96,33 +86,33 @@ button {
 /* FIRST PAGE */
 
 #page1 {
-  min-height: 82vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .intro {
-  padding: 38px 23px;
-  border-radius: 32px;
+  padding: 42px 23px;
   background: linear-gradient(145deg,#fff,#fff1f6);
 }
 
 .top-flower {
-  font-size: 44px;
-  margin: 27px 0;
-  animation: bloom 3s ease-in-out infinite;
+  font-size: 48px;
+  margin: 30px 0;
+  animation: bloom 2s infinite;
 }
 
 @keyframes bloom {
-  50% {transform: scale(1.12) rotate(5deg)}
+  50% {transform: scale(1.12)}
 }
 
 .intro h1 {
-  font-size: 37px;
+  font-size: 35px;
   line-height: 1.3;
-  color: #573746;
-  margin: 22px 0;
+  font-weight: 800;
+  color: #503442;
+  margin: 23px 0;
 }
 
 .intro h1 span {
@@ -130,22 +120,21 @@ button {
 }
 
 .intro p {
-  font-size: 13px;
-  line-height: 2;
-  color: #907985;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
 }
 
 .glow-btn {
-  display: inline-block;
   margin-top: 30px;
-  padding: 16px 30px;
+  padding: 17px 30px;
   border: 0;
   border-radius: 50px;
   color: white;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  background: linear-gradient(110deg,#d36d95,#ed9fba);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  background: linear-gradient(110deg,#ed4d83,#f39bb9);
   box-shadow: 0 8px 25px rgba(211,109,149,.4);
   animation: pulse 2s infinite;
 }
@@ -157,22 +146,22 @@ button {
 }
 
 .intro-bottom {
-  margin-top: 32px;
+  margin-top: 30px;
   color: #c18a9e;
   font-size: 11px;
   letter-spacing: 1px;
 }
 
-/* PAGE TWO */
+/* SECOND PAGE */
 
 #page2 {
-  animation: reveal .9s ease;
+  animation: reveal .8s ease;
 }
 
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -186,16 +175,18 @@ button {
 
 .brand {
   color: #1684a4;
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-size: 39px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-top: 12px;
 }
 
 .brand-sub {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 4px;
   color: #819ca6;
-  margin-top: 4px;
+  margin-top: 5px;
+  font-weight: 600;
 }
 
 .campaign-label {
@@ -204,16 +195,17 @@ button {
   background: #fce6ed;
   color: #cf7295;
   border-radius: 30px;
-  padding: 9px 16px;
+  padding: 10px 16px;
   font-size: 10px;
-  letter-spacing: 1.5px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 
 .hero-heading {
   font-size: 29px;
   line-height: 1.35;
-  margin: 19px 0 10px;
+  font-weight: 800;
+  margin: 20px 0 10px;
 }
 
 .pink {
@@ -221,39 +213,38 @@ button {
 }
 
 .description {
-  font-size: 13px;
-  color: #907b85;
-  line-height: 2;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.9;
   margin: 12px 0 20px;
 }
 
-/* PHOTOS */
+/* PHOTOGRAPHS */
 
 .photo-frame {
   background: white;
-  padding: 10px 10px 22px;
-  border-radius: 12px;
+  padding: 10px 10px 20px;
+  border-radius: 15px;
   box-shadow: 0 12px 30px rgba(90,50,65,.16);
-  transform: rotate(-1deg);
   margin: 25px 4px;
 }
 
 .photo-frame img {
   width: 100%;
   display: block;
-  border-radius: 7px;
+  border-radius: 9px;
   object-fit: cover;
-  max-height: 400px;
+  max-height: 430px;
 }
 
 .photo-caption {
-  font-family: 'Playfair Display',serif;
   color: #ad6c86;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 600;
   margin-top: 15px;
 }
 
-/* CETAPHIL PRODUCTS */
+/* PRODUCTS */
 
 .collection-box {
   background: linear-gradient(145deg,#fff8fb,#f0f8fa);
@@ -267,13 +258,15 @@ button {
   color: #d36c95;
   font-size: 24px;
   line-height: 1.4;
+  font-weight: 800;
+  margin-top: 10px;
 }
 
 .collection-sub {
   color: #819ca6;
   font-size: 10px;
   letter-spacing: 2px;
-  margin: 9px 0 24px;
+  margin: 10px 0 25px;
 }
 
 .products {
@@ -284,15 +277,11 @@ button {
 
 .product {
   padding: 13px 8px;
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.9);
   border: 1px solid #f1dce5;
   border-radius: 19px;
   box-shadow: 0 6px 18px rgba(160,100,125,.08);
   animation: appear .7s both;
-}
-
-.product:active {
-  transform: scale(.97);
 }
 
 @keyframes appear {
@@ -306,23 +295,17 @@ button {
   }
 }
 
-.product:nth-child(2) {animation-delay:.1s}
-.product:nth-child(3) {animation-delay:.2s}
-.product:nth-child(4) {animation-delay:.3s}
-.product:nth-child(5) {animation-delay:.4s}
-
 .product img {
   width: 100%;
-  height: 175px;
+  height: 165px;
   object-fit: contain;
   display: block;
 }
 
 .product h3 {
-  font-family: Poppins,sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 10px;
   color: #65505c;
 }
@@ -330,8 +313,14 @@ button {
 .product p {
   color: #d47799;
   font-size: 10px;
+  font-weight: 600;
   margin-top: 5px;
 }
+
+.product:nth-child(2) {animation-delay:.1s}
+.product:nth-child(3) {animation-delay:.2s}
+.product:nth-child(4) {animation-delay:.3s}
+.product:nth-child(5) {animation-delay:.4s}
 
 .product:last-child {
   grid-column: 1/3;
@@ -340,7 +329,7 @@ button {
 }
 
 .product:last-child img {
-  height: 155px;
+  height: 150px;
 }
 
 .product-footer {
@@ -350,31 +339,34 @@ button {
 }
 
 .product-footer h2 {
-  font-size: 22px;
+  font-size: 21px;
   color: #d16d92;
   line-height: 1.5;
+  font-weight: 800;
 }
 
 .product-footer p {
-  font-size: 12px;
+  font-size: 13px;
   color: #917b86;
   margin-top: 10px;
   line-height: 1.8;
 }
 
-/* AMBASSADOR */
+/* YUKTI SECTION */
 
 .ambassador {
   padding: 30px 17px;
   border-radius: 27px;
   background: linear-gradient(140deg,#fff,#fff0f5);
   margin: 30px 0;
+  text-align: center;
 }
 
 .ambassador h2 {
-  font-size: 27px;
+  font-size: 28px;
   line-height: 1.4;
-  margin: 13px 0;
+  font-weight: 800;
+  margin: 15px 0;
 }
 
 .ambassador-photo {
@@ -386,54 +378,55 @@ button {
 }
 
 .star {
-  color: var(--gold);
+  color: #c59b67;
   letter-spacing: 5px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .message {
-  font-family: 'Playfair Display',serif;
-  font-size: 23px;
+  font-size: 22px;
   color: #bd6386;
   line-height: 1.6;
+  font-weight: 800;
   margin: 20px 0;
 }
 
 .personal {
   color: #907b85;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 2;
   margin: 12px 0;
 }
 
 .signature {
   color: #d47799;
-  font-family: 'Playfair Display',serif;
   font-size: 22px;
+  font-weight: 800;
   margin-top: 23px;
 }
 
-/* STAR RATING */
+/* RATING */
 
 .rating-box {
   background: linear-gradient(145deg,#fff4f8,#fff);
   border: 1px solid #f3d5e1;
   border-radius: 25px;
-  padding: 27px 15px;
+  padding: 28px 15px;
   margin: 28px 0;
   text-align: center;
   box-shadow: 0 10px 30px rgba(180,90,125,.10);
 }
 
 .rating-box h2 {
-  font-size: 24px;
+  font-size: 25px;
+  font-weight: 800;
   color: #583a49;
-  line-height: 1.5;
+  line-height: 1.4;
   margin-top: 12px;
 }
 
 .rating-box p {
-  font-size: 12px;
+  font-size: 13px;
   color: #987c89;
   margin: 12px 0;
   line-height: 1.8;
@@ -449,11 +442,10 @@ button {
 .star-btn {
   background: none;
   border: none;
-  font-size: 37px;
+  font-size: 39px;
   color: #e7d5dc;
   transition: .2s;
   padding: 2px;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .star-btn.active {
@@ -461,15 +453,11 @@ button {
   transform: scale(1.18);
 }
 
-.star-btn:active {
-  transform: scale(1.3);
-}
-
 .rating-message {
   color: #d16d92;
   font-size: 12px;
   min-height: 22px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* THANK YOU POPUP */
@@ -511,6 +499,7 @@ button {
 .thankyou-card h2 {
   font-size: 29px;
   color: #d16d92;
+  font-weight: 800;
   margin-bottom: 13px;
 }
 
@@ -525,9 +514,10 @@ button {
   color: white;
   border: none;
   border-radius: 30px;
-  padding: 13px 25px;
+  padding: 14px 25px;
   margin-top: 23px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 @keyframes fadeIn {
@@ -551,9 +541,11 @@ button {
 .footer {
   color: #b67b93;
   font-size: 10px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   margin-top: 30px;
   line-height: 2;
+  text-align: center;
 }
 
 .back-btn {
@@ -563,6 +555,7 @@ button {
   border-radius: 40px;
   padding: 13px 23px;
   font-size: 12px;
+  font-weight: 700;
   margin-top: 20px;
 }
 
@@ -584,8 +577,8 @@ button {
 }
 
 @media(max-width:360px) {
-  .intro h1 {font-size:31px}
-  .product img {height:145px}
+  .intro h1 {font-size:30px}
+  .product img {height:140px}
 }
 </style>
 </head>
@@ -669,7 +662,7 @@ Some faces don't need a campaign.
 They ARE the campaign.
 </p>
 
-<!-- FIRST YUKTI PHOTO -->
+<!-- FIRST PHOTO -->
 
 <div class="photo-frame">
 
@@ -683,7 +676,7 @@ The face behind the glow ♡
 </div>
 
 
-<!-- CETAPHIL COLLECTION -->
+<!-- PRODUCT COLLECTION -->
 
 <div class="collection-box">
 
@@ -739,7 +732,7 @@ A LITTLE GLOW. A LOT OF LOVE.
 </div>
 
 
-<!-- AMBASSADOR SECTION -->
+<!-- YUKTI CAMPAIGN -->
 
 <div class="ambassador">
 
@@ -784,7 +777,7 @@ With love, always. ♡
 </div>
 
 
-<!-- RATE THE CAMPAIGN -->
+<!-- RATING -->
 
 <div class="rating-box">
 
@@ -800,11 +793,11 @@ Rate your exclusive Cetaphil × Yukti experience!
 
 <div class="stars">
 
-<button class="star-btn" onclick="rateAd(1)" aria-label="1 star">★</button>
-<button class="star-btn" onclick="rateAd(2)" aria-label="2 stars">★</button>
-<button class="star-btn" onclick="rateAd(3)" aria-label="3 stars">★</button>
-<button class="star-btn" onclick="rateAd(4)" aria-label="4 stars">★</button>
-<button class="star-btn" onclick="rateAd(5)" aria-label="5 stars">★</button>
+<button class="star-btn" onclick="rateAd(1)">★</button>
+<button class="star-btn" onclick="rateAd(2)">★</button>
+<button class="star-btn" onclick="rateAd(3)">★</button>
+<button class="star-btn" onclick="rateAd(4)">★</button>
+<button class="star-btn" onclick="rateAd(5)">★</button>
 
 </div>
 
@@ -825,6 +818,8 @@ A LITTLE REMINDER THAT YOU'RE MY FAVOURITE ♡
 </button>
 
 </div>
+
+</section>
 
 
 <!-- THANK YOU POPUP -->
@@ -868,7 +863,9 @@ Aww, you're welcome ♡
 const heartBox = document.getElementById("hearts");
 
 function createHeart() {
+
   const heart = document.createElement("div");
+
   heart.className = "floating";
 
   heart.innerHTML = ["♡","♥","✧","🌸"][
@@ -971,12 +968,7 @@ function rateAd(rating) {
   const stars = document.querySelectorAll(".star-btn");
 
   stars.forEach((star,index) => {
-
-    star.classList.toggle(
-      "active",
-      index < rating
-    );
-
+    star.classList.toggle("active",index < rating);
   });
 
   const messages = {
