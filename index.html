@@ -20,7 +20,7 @@
 
 body {
   min-height: 100vh;
-  padding: 25px 14px;
+  padding: 24px 14px;
   background: linear-gradient(135deg,#ffd6e0,#fff0f5);
   font-family: 'Poppins',sans-serif;
   color: #493c42;
@@ -34,7 +34,7 @@ body {
 .card {
   background: #fff;
   border-radius: 27px;
-  padding: 27px 20px;
+  padding: 26px 20px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(150,76,103,.14);
   overflow: hidden;
@@ -102,7 +102,7 @@ h1 {
   margin-top: 25px;
 }
 
-/* BRAND PAGE */
+/* PAGE TWO */
 
 .brand-name {
   color: #1682a5;
@@ -140,20 +140,20 @@ h1 {
   box-shadow: 0 7px 20px rgba(78,46,60,.12);
 }
 
-/* PRODUCT SHOWCASE */
+/* REAL CETAPHIL PRODUCTS */
 
 .product-area {
-  background: linear-gradient(145deg,#fff8fa,#f0f9fc);
+  background: linear-gradient(145deg,#fff7fa,#f0f9fc);
   border: 1px solid #f2dce5;
   border-radius: 22px;
-  padding: 25px 12px;
+  padding: 24px 12px;
   margin: 22px 0;
 }
 
 .product-heading {
   color: #d66d91;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -161,100 +161,57 @@ h1 {
   color: #829da6;
   font-size: 10px;
   letter-spacing: 1.5px;
-  margin: 7px 0 25px;
+  margin: 7px 0 22px;
 }
 
 .collection {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 22px 10px;
-  align-items: end;
+  align-items: stretch;
 }
 
 .product {
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid #f3e3e9;
+  border-radius: 16px;
+  padding: 12px 7px;
 }
 
-.pack {
-  width: 78px;
-  height: 112px;
-  border: 1px solid #ead2dc;
-  border-radius: 10px 10px 15px 15px;
-  background: linear-gradient(90deg,#fff,#fff0f5);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 12px rgba(180,100,130,.12);
-}
-
-.pack::before {
-  content: "";
-  position: absolute;
-  top: -9px;
-  width: 29px;
-  height: 11px;
-  background: #edb6c8;
-  border-radius: 4px 4px 2px 2px;
-}
-
-.pack::after {
-  content: "Cetaphil";
-  position: absolute;
-  top: 42%;
-  color: #1682a5;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.pack.tall {
-  height: 132px;
-  width: 76px;
-}
-
-.pack.jar {
-  width: 88px;
-  height: 75px;
-  border-radius: 15px;
-}
-
-.pack.jar::before {
-  top: -8px;
-  width: 90px;
-  height: 10px;
-  border-radius: 5px;
-}
-
-.pack.tube {
-  height: 120px;
-  width: 65px;
-  border-radius: 10px 10px 17px 17px;
-}
-
-.pack.tube::before {
-  top: auto;
-  bottom: -7px;
-  width: 23px;
-  height: 9px;
-  background: #edb6c8;
-}
-
-.product-label {
-  color: #765e69;
-  font-size: 10px;
-  line-height: 1.6;
-  font-weight: 500;
-  max-width: 125px;
-}
-
-.product-label small {
+.product-image {
+  width: 100%;
+  height: 175px;
+  object-fit: contain;
   display: block;
-  color: #c47793;
-  font-size: 9px;
-  margin-top: 3px;
+}
+
+.product-name {
+  color: #65515c;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.product-type {
+  color: #d07898;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.product:last-child {
+  grid-column: 1 / -1;
+  width: 55%;
+  justify-self: center;
+}
+
+.product:last-child .product-image {
+  height: 155px;
 }
 
 .tagline {
@@ -285,6 +242,10 @@ h1 {
   h1 {
     font-size: 24px;
   }
+
+  .product-image {
+    height: 150px;
+  }
 }
 </style>
 </head>
@@ -293,7 +254,7 @@ h1 {
 
 <div class="page">
 
-<!-- PAGE 1: ANNOUNCEMENT -->
+<!-- PAGE 1 -->
 
 <section class="card" id="page1">
 
@@ -329,7 +290,7 @@ made just for you.
 </section>
 
 
-<!-- PAGE 2: CETAPHIL REVEAL -->
+<!-- PAGE 2 -->
 
 <section class="card hidden" id="page2">
 
@@ -354,7 +315,7 @@ Introducing the face of our newest
 skincare collaboration.
 </p>
 
-<!-- YUKTI'S PHOTO -->
+<!-- YUKTI'S PHOTOGRAPH -->
 
 <img
 class="hero-photo"
@@ -362,7 +323,7 @@ src="assets/IMG_8037.jpeg"
 alt="Yukti - Brand Ambassador"
 >
 
-<!-- PINK CETAPHIL COLLECTION -->
+<!-- ACTUAL CETAPHIL PRODUCTS -->
 
 <div class="product-area">
 
@@ -376,36 +337,113 @@ A LITTLE GLOW. A LOT OF LOVE.
 
 <div class="collection">
 
-<div class="product">
-<div class="pack tube"></div>
-<p class="product-label">
-Reveal Creamy Cleanser
-<small>Cleanse</small>
-</p>
-</div>
+<!-- CLEANSER -->
 
 <div class="product">
-<div class="pack tall"></div>
-<p class="product-label">
+
+<img
+class="product-image"
+src="https://www.cetaphil.in/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dwa987ef39/Rebranding/3499320011556/ATF/Cetaphil%20Bright%20Healthy%20Radiance%20Reveal%20Creamy%20Cleanser%20100g-1.png?q=85&sh=900&sm=fit&sw=900"
+alt="Cetaphil Reveal Creamy Cleanser"
+loading="lazy"
+>
+
+<p class="product-name">
+Brightness Reveal Creamy Cleanser
+</p>
+
+<p class="product-type">
+GENTLE CLEANSING
+</p>
+
+</div>
+
+
+<!-- TONER -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://www.cetaphil.in/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dw12891067/Rebranding/Toner/ATF/Cetaphil%20Bright%20Healthy%20Radiance%20Refresh%20Toner%20150mL-1.png?q=85&sh=900&sm=fit&sw=900"
+alt="Cetaphil Brightness Refresh Toner"
+loading="lazy"
+>
+
+<p class="product-name">
+Brightness Refresh Toner
+</p>
+
+<p class="product-type">
+FRESH HYDRATION
+</p>
+
+</div>
+
+
+<!-- LOTION -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://www.cetaphil.in/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dwf26fdcd5/3499320011532/BHR_BL_245ml.png?q=85&sh=900&sm=fit&sw=900"
+alt="Cetaphil Brightening Lotion"
+loading="lazy"
+>
+
+<p class="product-name">
 Brightening Lotion
-<small>Hydrate</small>
 </p>
+
+<p class="product-type">
+DAILY MOISTURE
+</p>
+
 </div>
 
+
+<!-- SERUM -->
+
 <div class="product">
-<div class="pack"></div>
-<p class="product-label">
+
+<img
+class="product-image"
+src="https://www.cetaphil.in/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dwf0e0bdc5/Rebranding/Serum/30Ml/ATF/Cetaphil%20Bright%20Healthy%20Radiance%20Perfecting%20Serum%2030ml-1.png?q=85&sh=900&sm=fit&sw=900"
+alt="Cetaphil Perfecting Serum"
+loading="lazy"
+>
+
+<p class="product-name">
 Perfecting Serum
-<small>Perfect</small>
 </p>
+
+<p class="product-type">
+RADIANCE BOOST
+</p>
+
 </div>
 
+
+<!-- NIGHT CREAM -->
+
 <div class="product">
-<div class="pack jar"></div>
-<p class="product-label">
-Night Comfort Cream
-<small>Nourish</small>
+
+<img
+class="product-image"
+src="https://www.cetaphil.in/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dw85cc9270/Rebranding/Night%20Cream/ATF/Cetaphil%20Bright%20Healthy%20Radiance%20Brightening%20Night%20Comfort%20Cream%2C%2050g-1.png?q=85&sh=900&sm=fit&sw=900"
+alt="Cetaphil Brightening Night Comfort Cream"
+loading="lazy"
+>
+
+<p class="product-name">
+Brightening Night Comfort Cream
 </p>
+
+<p class="product-type">
+OVERNIGHT CARE
+</p>
+
 </div>
 
 </div>
@@ -428,6 +466,15 @@ And here's our favourite face. ♡
 The real reason this collaboration deserves
 a five-star rating.
 </p>
+
+<!-- SECOND PHOTO -->
+
+<img
+class="hero-photo"
+src="assets/IMG_8015.jpeg"
+alt="Yukti enjoying her evening"
+loading="lazy"
+>
 
 <p class="tagline">
 Looking good is one thing.<br>
